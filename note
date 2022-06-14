@@ -1,0 +1,9 @@
+bootswatch = for front end theme
+redux = state manager (manage global state)
+react-redux = connect react and redux
+redux-thunk =  
+
+
+concurrently = run front end and backend server simultanoeusly in single terminal
+bcryptjs = encrypt password 
+express-async-handler = handle errors

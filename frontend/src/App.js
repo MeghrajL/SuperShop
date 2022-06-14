@@ -10,7 +10,6 @@ function App() {
     <Router>
       <Header />
       <main className="py-3">
-        {" "}
         {/*top padding 3*/}
         <Container>
           <Routes>

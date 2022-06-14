@@ -6,7 +6,7 @@ import Rating from "./Rating";
 const Product = ({ product }) => {
   return (
     <Card className="my-3 p-3 rounded">
-      {/*my margin on y axis (top & bottom) and p is padding*/}
+      {/*my = margin on y axis (top & bottom) and p is padding*/}
       <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} variant="top" />
       </Link>

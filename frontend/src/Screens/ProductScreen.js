@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
-import products from "../Products";
+import axios from "axios";
 
 const ProductScreen = (props) => {
-  let { id } = useParams();
-  const product = products.find((p) => p._id === id);
+  let { id } = useParams(); //get id from props
+  //const product = products.find((p) => p._id === id);
+
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${id}`);
+      setProduct(data);
+    };
+    fetchProduct();
+  }, [id]);
 
   return (
     <>
@@ -16,7 +26,8 @@ const ProductScreen = (props) => {
 
       <Row>
         <Col md={6}>
-          <Image src={product.image} alt={product.name} fluid />
+          <Image src={product.image} alt={product.name} fluid />{" "}
+          {/*fluid so imaage doesnt flow out from the container*/}
         </Col>
 
         <Col md={3}>

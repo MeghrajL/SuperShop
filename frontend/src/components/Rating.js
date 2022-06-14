@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 const Rating = ({ value, text, color }) => {
   return (
     <div className="rating">
+      {/*className for the i tag is selected using ternary operation if value received is >=1 full star font awesome icon is displayed half for >= 0.5 else empty star */}
       <span>
         <i
           style={{ color }}
@@ -69,7 +70,7 @@ const Rating = ({ value, text, color }) => {
   );
 };
 
-Rating.defaultProps = { color: "#f8e825" };
+Rating.defaultProps = { color: "#f8e825" }; /*seting default color prop */
 
 Rating.propTypes = {
   value: PropTypes.number.isRequired,
