@@ -1,7 +1,8 @@
 bootswatch = for front end theme
 redux = state manager (manage global state)
 react-redux = connect react and redux
-redux-thunk =  
+redux-thunk =  allows us to make async requests to the servers in action creators
+redux-devtools-ext 
 
 
 concurrently = run front end and backend server simultanoeusly in single terminal
